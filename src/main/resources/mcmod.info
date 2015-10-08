@@ -1,0 +1,16 @@
+[
+{
+  "modid": "customanvilrecipes",
+  "name": "Custom Anvil Recipes",
+  "description": "Add custom anvil recipe",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["Oortcloud(a3626a)"],
+  "credits": "NONE",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": [IC2]
+}
+]

@@ -3,7 +3,6 @@ package oortcloud.customanvilrecipes.anvil;
 import java.util.HashMap;
 
 import net.minecraft.item.ItemStack;
-import oortcloud.customanvilrecipes.configuration.HashItemType;
 import oortcloud.customanvilrecipes.configuration.HashPairedItemType;
 
 import org.apache.commons.lang3.tuple.Pair;

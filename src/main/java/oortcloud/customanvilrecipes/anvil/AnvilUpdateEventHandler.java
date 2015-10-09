@@ -2,7 +2,6 @@ package oortcloud.customanvilrecipes.anvil;
 
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.event.AnvilUpdateEvent;
-import oortcloud.customanvilrecipes.CustomAnvilRecipes;
 import oortcloud.customanvilrecipes.configuration.HashItemType;
 import oortcloud.customanvilrecipes.configuration.HashPairedItemType;
 

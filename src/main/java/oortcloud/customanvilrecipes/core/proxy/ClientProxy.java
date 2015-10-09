@@ -1,5 +1,9 @@
 package oortcloud.customanvilrecipes.core.proxy;
 
-public class ClientProxy extends CommonProxy {
+import oortcloud.customanvilrecipes.api.nei.NEIHandler;
 
+public class ClientProxy extends CommonProxy {
+	public void initNEI() {
+		NEIHandler.init();
+	}
 }

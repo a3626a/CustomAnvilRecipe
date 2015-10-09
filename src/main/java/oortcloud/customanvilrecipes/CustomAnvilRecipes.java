@@ -1,7 +1,6 @@
 package oortcloud.customanvilrecipes;
 
 import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.common.config.Configuration;
 import oortcloud.customanvilrecipes.anvil.AnvilUpdateEventHandler;
 import oortcloud.customanvilrecipes.configuration.ConfigurationHandler;
 import oortcloud.customanvilrecipes.core.proxy.CommonProxy;
@@ -9,6 +8,7 @@ import oortcloud.customanvilrecipes.libs.References;
 
 import org.apache.logging.log4j.Logger;
 
+import cpw.mods.fml.common.Loader;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
@@ -33,12 +33,14 @@ public class CustomAnvilRecipes {
 	}
 	
 	@Mod.EventHandler
-	public static void Init(FMLInitializationEvent event) throws NoSuchFieldException, SecurityException, IllegalArgumentException, IllegalAccessException {
+	public static void Init(FMLInitializationEvent event) {
 		MinecraftForge.EVENT_BUS.register(new AnvilUpdateEventHandler());
 	}
 	
 	@Mod.EventHandler
 	public static void postInit(FMLPostInitializationEvent event) {
 		ConfigurationHandler.sync();
+		if (Loader.isModLoaded("NotEnoughItems"))
+			proxy.initNEI();
 	}
 }
